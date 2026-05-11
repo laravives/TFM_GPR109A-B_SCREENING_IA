@@ -21,8 +21,6 @@ The scripts were developed to facilitate reproducibility and workflow organizati
 ## Repository Structure
 
 ```text
-scripts/
-│
 │
 ├── amber/
 │   ├── prep.sh                 # System preparation
@@ -50,6 +48,8 @@ scripts/
 │
 ├── .gitignore              
 └── README.md
+
+```
 
 ## Software and Computational Tools
 
