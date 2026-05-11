@@ -1,0 +1,13 @@
+Minimization restrained
+&cntrl
+  imin=1,
+  maxcyc=5000,
+  ncyc=2500,
+  cut=10.0,
+  ntb=1,
+  ntpr=100,
+
+  ntr=1,
+  restraint_wt=10.0,
+  restraintmask='!:WAT & !:Na+ & !:Cl-'
+/
