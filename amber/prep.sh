@@ -3,23 +3,23 @@
 source /project/home/p201228/miniconda3/etc/profile.d/conda.sh
 conda activate amber
 
-# Leer todas las carpetas desde ligands.txt
+# Leer todas las carpetas desde lig.txt
 while read dir; do
 
     echo "Procesando $dir ..."
 
     cd "$dir" || continue
 
-    # 2. Limpiar con pdb4amber
+    # Limpiar con pdb4amber
 
     pdb4amber -i $dir.pdb -o complex.pdb --reduce
 
-    # 3. Separar proteína y ligando
+    # Separar proteína y ligando
 
     grep "^ATOM" complex.pdb > protein.pdb
     grep "^HETATM" complex.pdb > ligand.pdb
 
-    # 4. Preparar ligando
+    # Preparar ligando
 
     antechamber \
         -i ligand.pdb \
@@ -31,14 +31,14 @@ while read dir; do
         -s 2 \
         -nc 0
 
-    # 5. Generar frcmod
+    # Generar frcmod
 
     parmchk2 \
         -i ligand.mol2 \
         -f mol2 \
         -o ligand.frcmod
 
-    # 6. Crear tleap.in
+    # Crear tleap.in
 
     cat > tleap.in <<EOF
 source leaprc.protein.ff14SB
@@ -64,7 +64,7 @@ saveamberparm LIG ligand.prmtop ligand.inpcrd
 quit
 EOF
 
-    # 7. Ejecutar tleap
+    # Ejecutar tleap
 
     tleap -f tleap.in > tleap.log
 
