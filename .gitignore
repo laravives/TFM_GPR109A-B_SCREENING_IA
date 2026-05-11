@@ -1,0 +1,16 @@
+*.xtc
+*.trr
+*.dcd
+*.nc
+*.log
+*.out
+*.err
+*:Zone.Identifier
+
+__pycache__/
+*.pyc
+
+.ipynb_checkpoints/
+
+env/
+venv/
