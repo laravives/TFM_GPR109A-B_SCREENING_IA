@@ -6,7 +6,7 @@ This repository contains the computational scripts developed for the TFM:
 
 ## Project Overview
 
-The main objective of this project is to investigate the interaction of small molecules with the GPCR receptors GPR109A and GPR109B using different computational approaches.
+The main objective of this project is to perform a comparative evaluation of physics-based and artificial intelligence-based computational approaches for the structural modeling, affinity prediction, and virtual screening of GPR109A/B–ligand complexes
 
 The repository includes workflows related to:
 
