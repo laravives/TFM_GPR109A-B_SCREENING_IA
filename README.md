@@ -2,7 +2,7 @@
 
 This repository contains the computational scripts developed for the TFM:
 
-**“Comparative Computational Modeling of GPR109A/B Complexes with Small Molecules Using Virtual Screening and Artificial Intelligence Methods.”**
+**"Comparative Computational Modeling of GPR109A/B Complexes with Small Molecules: Physics-Based Methods versus Artificial Intelligence Approaches”**
 
 ## Project Overview
 
